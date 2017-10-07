@@ -1,0 +1,49 @@
+.ft-label{
+	float: right;
+}
+
+footer{
+	width: 100%;
+	position: relative;
+	bottom: 20px;
+	left: 0;
+}
+
+.footer{
+	border-top: 1px solid #ccc;
+	margin-top: 50px;
+	padding-top: 15px;
+	
+}
+
+.table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #ddd;
+	background: #3498db;
+	color: #fff;
+}
+
+.table > tbody + tbody {
+	border-top: 1px solid #ddd;
+}
+
+/* teknik css untuk setting resolusi */
+@media (max-width: 768px){
+	.ft-label{
+		float: none !important; /* jika properti sama maka kode yang paling bawah yang akan dipakai */
+	}
+}
+
+.navbar-default {
+    background-color: #3498db;
+    border-color: #e7e7e7;
+    
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+}

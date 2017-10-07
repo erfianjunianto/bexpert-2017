@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Form Pendaftaran</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h2 style="text-align: center;">Form Pendaftaran Pelatihan Pemrograman Web</h2>
+		<form name="formdaftar" method="post" id="formdaftar" action="" class="form-horizontal">
+			<div class="form-group row">
+				<label for="nama" class="col-sm-2 col-form-label">Nama:</label>
+				<div class="col-sm-10">			
+					<input type="text" name="nama" id="nama" size="30" required="required" value="" placeholder="" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telepon" class="col-sm-2 col-form-label">Telepon:</label>
+				<div class="col-sm-10">
+					<input type="text" name="telpon" id="telpon" required="required" value="" placeholder="" class="form-control">	
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="email">Email:</label>
+				<div class="col-sm-10">
+					<input type="text" name="email" id="email" required="required" maxlength="30" size="30" value="" placeholder="" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="alamat">Alamat:</label>
+				<div class="col-sm-10">
+					<textarea name="alamat" id="alamat" rows="4" cols="30" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="jnskelamin">Gender:</label>
+				<div class="col-sm-10">
+					<label class="custom-control custom-radio">
+						<input id="radio1" name="radio" type="radio" class="custom-control-input" value="L">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Laki-Laki</span>
+					</label>
+					<label class="custom-control custom-radio">
+						<input id="radio2" name="radio" type="radio" class="custom-control-input" value="P">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Perempuan</span>
+					</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="foto">Foto:</label>
+				<div class="col-sm-10">
+					<input type="file" name="foto" id="foto" class="form-control-file">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="php">Pemrograman:</label>
+				<div class="col-sm-10">
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" name="program" value="php">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">PHP</span>
+					</label>
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" name="program" value="java">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Java</span>
+					</label>
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" name="program" value="html">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">HTML</span>
+					</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label" for="pengalaman">Pengalaman:</label>
+				<div class="col-sm-10">
+					<select name="pengalaman" size="1" id="pengalaman" class="custom-select">
+					<option value="1">Sudah pernah bekerja</option>
+					<option value="2">Sedang bekerja</option>
+					<option value="3">Belum bekerja</option>
+				</select>
+			</div>
+			<div class="form-group row">
+				<input type="submit" name="submit" value="Daftar" id="submit" class="btn btn-primary pull-right">
+			</div>
+		</form>
+	</div>
+
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    
+  </body>
+</body>
+</html>

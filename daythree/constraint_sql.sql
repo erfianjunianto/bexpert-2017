@@ -1,0 +1,2 @@
+ALTER TABLE db_karyawan.karyawan ADD CONSTRAINT fk_karyawan_divisi FOREIGN KEY (divisiid) REFERENCES db_karyawan.divisi(divisiid);
+ALTER TABLE db_karyawan.users ADD CONSTRAINT fk_karyawan_user FOREIGN KEY (karyawanid) REFERENCES db_karyawan.karyawan(karyawanid);

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Load JQuery</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("span").mouseover(function(){
+				$(this).css("color","green");
+			});
+			$("#div1").click(function(){
+				$(this).css("color","blue");
+			});
+			$(".divclass").dblclick(function(){
+				$(this).css("color","red");
+			});
+			$("*").keypress(function(){
+				$(this).css("font-weight","bold");
+			});
+			$("p,h1").click(function(){
+				alert("tag p dan h1 di klik");
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div><span>Selector Tag</span></div>
+	<div><span>Selector Tag</span></div>
+	<div id="div1">Selector ID</div>
+	<div>Selector Universal (tekan keyboard)</div>
+	<p>
+		Selector Universal
+	</p>
+	<h1>Selector Universal</h1>
+</body>
+</html>

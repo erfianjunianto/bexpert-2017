@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Load JQuery</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.blue{
+			background-color: blue;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("#div1").addClass("blue");
+			$("#search").keyup(function(){
+				$("#div2").html($("#search").val());
+				$("#div3").text($("#search").val());
+			});
+			$("#div1").click(function(){
+				$(this).hide(1000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div1">Klik div1 ini</div>
+	<br>
+	<input type="text" id="search" placeholder="Ketikan sesuatu">
+	<div id="div2">div2</div>
+	<div id="div3">div3</div>
+</body>
+</html>

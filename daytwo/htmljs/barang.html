@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<title>Contoh Form Master Detail</title>
+	<script type="text/javascript">
+		var idx = 0;
+
+		function hapus(idx){
+			$("#tr_"+idx).remove();
+		}
+
+		function add_content(idx){
+			var content = '<tr id="tr_'+ idx +'">';
+			content += '<td>';
+			content += '<input type="text" name="barang[]" id="barang['+ idx +']">';
+			content += '</td>';
+
+			content += '<td>';
+			content += '<input type="text" name="jumlah[]" id="jumlah['+ idx +']">';
+			content += '</td>';
+
+			content += '<td>';
+			content += '<input type="text" name="satuan[]" id="satuan['+ idx +']">';
+			content += '</td>';
+
+			content += '<td>';
+			content += '<input type="text" name="total[]" id="total['+ idx +']">';
+			content += '</td>';
+
+			content += '<td>';
+			content += '<a href="#" onclick=\"hapus('+ idx +')\" class=\"btn btn-info\">Hapus</a>';
+			content += '</td>';
+
+			content += '</tr>';
+
+			$("#tabel").append(content);
+		}
+
+		$(function(){
+			add_content();
+			idx++;
+			$("#btnadd").click(function(){
+				add_content();
+				idx++;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row"><p></p></div>
+		<div class="row">
+			<form action="barang.php" method="post" accept-charset="utf-8" name="formbeli" id="formbeli" class="form-horizontal">
+				<div class="form-group">
+					<label for="faktur" class="col-sm-2 control-label">Nomor Faktur:</label>
+					<div class="col-sm-10">
+						<input type="text" name="faktur" id="faktur" size="30" required="required" value="" placeholder="" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="petugas" class="col-sm-2 control-label">Petugas:</label>
+					<div class="col-sm-10">
+						<input type="text" name="petugas" id="petugas" size="30" required="required" value="" placeholder="" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<input type="button" value="+" id="btnadd" class="btn btn-primary pull-left">
+					<input type="submit" name="submit" value="Bayar" id="submit" class="btn btn-danger pull-right">
+				</div>
+				<table id="tabel" class="table tabel-striped">
+					<tr>
+						<th>Barang</th>
+						<th>Jumlah</th>
+						<th>Harga</th>
+						<th>Total</th>
+						<th>Aksi</th>
+					</tr>
+				</table>
+				<div class="button">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

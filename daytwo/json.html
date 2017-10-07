@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function getPerson(){
+               var text = '{"employees":[' +
+                            '{"firstName":"John","lastName":"Doe" },' +
+                            '{"firstName":"Anna","lastName":"Smith" },' +
+                            '{"firstName":"Peter","lastName":"Jones" }]}';
+                var obj = JSON.parse(text);
+                /*
+                document.getElementById("div1").innerHTML = obj.employees[0].firstName + " " + obj.employees[0].lastName;
+                document.getElementById("div1").append(obj.employees[1].firstName + " " + obj.employees[1].lastName);
+                document.getElementById("div1").append(obj.employees[2].firstName + " " + obj.employees[2].lastName);
+                */
+                var html = "";
+                for (var i = 0; i < 3; i++) {
+                    html += obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>";
+                }
+                document.getElementById("div1").innerHTML = html;
+                //$("#div1").html(html);
+            };
+        </script>
+    </head>
+    <body>
+        <button onclick="getPerson()">fetch person.json</button>
+        <div id="div1"></div>
+    </body>
+</html>

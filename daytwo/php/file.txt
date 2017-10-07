@@ -1,0 +1,2 @@
+file data
+data di baris ke dua

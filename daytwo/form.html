@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Form Pendaftaran</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="form.js"></script>	
+	<link rel="stylesheet" href="../dayone/css/form.css">
+	<style type="text/css" media="screen">
+		body{
+			background-color: aliceblue;
+		}
+		h1{
+			color:blue;
+		}
+		.embedded{
+			font-size: 20px;
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h2>Form Pendaftaran Pelatihan Pemrograman Web</h2>
+	<form name="formdaftar" method="post" id="formdaftar">
+		<div>
+			<label for="nama">Nama:</label>
+			<input type="text" name="nama" id="nama" size="30" required="required" value="" placeholder="">
+		</div>
+		<div>
+			<label for="telepon">Telepon:</label>
+			<input type="text" name="telpon" id="telpon" required="required" value="" placeholder="">
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email" required="required" maxlength="30" size="30" value="" placeholder="">
+		</div>
+		<div>
+			<label for="alamat">Alamat:</label>
+			<textarea name="alamat" id="alamat" rows="4" cols="30"></textarea>
+		</div>
+		<div>
+			<label for="jnskelamin">Gender:</label>
+			<input type="radio" name="jnskelamin" id="laki" value="L"> Laki-Laki
+			<input type="radio" name="jnskelamin" id="perempuan" value="P"> Perempuan
+		</div>
+		<div>
+			<label for="foto">Foto:</label>
+			<input type="file" name="foto" id="foto">
+		</div>
+		<div>
+			<label for="php">Pemrograman:</label>
+			<input type="checkbox" name="program" id="php" value="PHP">PHP 
+			<input type="checkbox" name="program" id="java" value="Java">Java 
+			<input type="checkbox" name="program" id="html" value="HTML">HTML 
+		</div>
+		<div>
+			<label for="pengalaman">Pengalaman:</label>
+			<select name="pengalaman" size="1" id="pengalaman">
+				<option value="1">Sudah pernah bekerja</option>
+				<option value="2">Sedang bekerja</option>
+				<option value="3">Belum bekerja</option>
+			</select>
+		</div>
+		<div class="button">
+			<input type="submit" name="submit" value="Daftar" id="submit">
+		</div>
+	</form>
+
+
+</body>
+</html>
