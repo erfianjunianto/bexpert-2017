@@ -17,3 +17,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?=base_url();?>assets/css/style.css">
 	<link rel="stylesheet" href="<?=base_url();?>assets/bootstrap-datepicker/bootstrap-datepicker.css">
 </head>
+<body>

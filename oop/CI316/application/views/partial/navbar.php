@@ -15,7 +15,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="<?=base_url();?>index.php">Home</a></li>
-				<li><a href="<?=base_url();?>divisi">Divisi</a></li>
+				<li><a href="<?=site_url('divisi');?>">Divisi</a></li>
 				<li><a href="<?=base_url();?>divisi">Karyawan</a></li>
 				<li><a href="<?=base_url();?>divisi">Divisi</a></li>
 				

@@ -13,7 +13,7 @@ class DBConnection
 	var $con;
 	var $result;
 
-	public function __construct($host = 'localhost', $user = 'root', $password = 'password', $dbname = 'db_karyawan', $port='3306')
+	public function __construct($host = DBHOST, $user = DBUSER, $password = DBPASS, $dbname = DBNAME, $port='3306')
 	{
 		$this->host = $host;
 		$this->user = $user;
@@ -27,19 +27,4 @@ class DBConnection
 		$this->con = mysqli_connect($this->host, $this->user, $this->password, $this->dbname, $this->port) or die (mysqli_connect_error());
 	}
 
-	public function execute_query($query)
-	{
-		$this->result = mysqli_query($this->con, $query) or die (mysqli_error($this->con));
-		return $this->result;
-	}
-
-	public function show_result()
-	{
-		while ($row = mysqli_fetch_assoc($this->result)) {
-			foreach ($row as $field => $value) {
-				echo $field . " : ". $value . "<br>";
-			}
-			echo "<hr>";
-		}
-	}
 }
